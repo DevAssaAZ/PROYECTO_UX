@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="PROYECTO_UX.MP" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -86,17 +85,17 @@
         <div class="container">
             <p>&copy; 2024 Cursos English-UG. Todos los derechos reservados.</p>
             <p>
-                <a href="#" class="text-white">Política de Privacidad</a> |
-                <a href="#" class="text-white">Términos de Uso</a> |
+                <a href="#" id="privacyLink" class="text-white" onclick="showPrivacyPolicy(event)">Política de Privacidad</a> |
+                <a href="#" id="termsLink" class="text-white" onclick="showTerms(event)">Términos de Uso</a> |
                 <a href="#" class="text-white">Contacto</a>
             </p>
         </div>
     </footer>
     <script type="text/javascript">
-        function confirmLogout(event) {
+        async function confirmLogout(event) {
             event.preventDefault();
             Swal.fire({
-                title: "¿Estás seguro?",
+                title: "¿Estás seguro de cerrar sesion?",
                 text: "¡No podrás revertir esto!",
                 icon: "warning",
                 showCancelButton: true,
@@ -129,7 +128,41 @@
                 }
             });
         }
-        </script>
+
+        async function showTerms(event) {
+            event.preventDefault();
+            const { value: accept } = await Swal.fire({
+                title: "Términos y condiciones",
+                input: "checkbox",
+                inputValue: 1,
+                inputPlaceholder: "Estoy de acuerdo con los términos y condiciones",
+                confirmButtonText: "Continuar&nbsp;<i class='fa fa-arrow-right'></i>",
+                inputValidator: (result) => {
+                    return !result && "Necesitas aceptar los Terminos y condiciones";
+                }
+            });
+
+            if (accept) {
+                Swal.fire("Has aceptado los Terminos y condiciones :)");
+            }
+        }
+
+        function showPrivacyPolicy(event) {
+            event.preventDefault();
+            Swal.fire({
+                title: "Esto aun no esta terminado :c.",
+                width: 600,
+                padding: "3em",
+                color: "#716add",
+                background: "#fff url(/images/trees.png)",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url("/images/nyan-cat.gif")
+                    left top
+                    no-repeat
+                `
+            });
+        }
+    </script>
 </body>
 </html>
-

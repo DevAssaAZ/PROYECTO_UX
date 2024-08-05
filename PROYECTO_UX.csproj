@@ -69,6 +69,9 @@
   <ItemGroup>
     <Content Include="Recursos\Css\StyleLogin.css" />
     <Content Include="Recursos\Css\StyleModalLogin.css" />
+    <Content Include="Recursos\Imagenes\Iconos\icons-correo.png" />
+    <Content Include="Recursos\Imagenes\Iconos\icons-facebook.png" />
+    <Content Include="Recursos\Imagenes\Iconos\icons-instagram.png" />
     <Content Include="Recursos\Imagenes\ImgLogin\FondoLogin.jpeg" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
