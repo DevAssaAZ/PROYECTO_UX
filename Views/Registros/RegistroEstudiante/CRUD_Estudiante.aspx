@@ -4,18 +4,32 @@
     CRUD-Estudiantes
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <br />
     <br />
     <br />
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <asp:Label runat="server" CssClass="h2 text-center" ID="lbltitulo"></asp:Label>
-        </div>
-    </div>
+
     <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
-        <div>
+        <div class="form-container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <asp:Label runat="server" CssClass="h2 text-center" ID="lbltitulo"></asp:Label>
+                </div>
+            </div>
+            <br />
+            <br />
             <div class="mb-3">
                 <label class="form-label">Cedula</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbCedula"></asp:TextBox>
@@ -39,8 +53,8 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Gratuidad</label>
-                <asp:DropDownList ID="ddlGratuidad" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlGratuidad_SelectedIndexChanged">
-                    <asp:ListItem Text="Selecciona la Gratuidad" Value="" />
+                <asp:DropDownList ID="ddlGratuidad" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlGratuidad_SelectedIndexChanged">
+                    <asp:ListItem Text="SELECCIONAR" Value="" />
                     <asp:ListItem Text="Si" Value="Si" />
                     <asp:ListItem Text="No" Value="No" />
                 </asp:DropDownList>

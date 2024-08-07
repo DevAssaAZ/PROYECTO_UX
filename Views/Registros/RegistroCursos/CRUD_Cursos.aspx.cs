@@ -39,6 +39,12 @@ namespace PROYECTO_UX.Views.Registros.RegistroCursos
                             break;
                         case "V":
                             this.lbltitulo.Text = "Consulta de Curso";
+                            tbNombreCurso.Enabled = false;
+                            tbdateInicio.Enabled = false;
+                            tbdateFin.Enabled = false;
+                            tbDuracion.Enabled = false;
+                            ddlNivel.Enabled = false;
+                            ddlEstado.Enabled = false;
                             break;
                         case "A":
                             this.lbltitulo.Text = "Modificar Curso";
@@ -47,6 +53,12 @@ namespace PROYECTO_UX.Views.Registros.RegistroCursos
                         case "E":
                             this.lbltitulo.Text = "Eliminar Curso";
                             this.btnEliminar.Visible = true;
+                            tbNombreCurso.Enabled = false;
+                            tbdateInicio.Enabled = false;
+                            tbdateFin.Enabled = false;
+                            tbDuracion.Enabled = false;
+                            ddlNivel.Enabled = false;
+                            ddlEstado.Enabled = false;
                             break;
                     }
                 }
@@ -137,5 +149,6 @@ namespace PROYECTO_UX.Views.Registros.RegistroCursos
             string selectedText = ddlEstado.SelectedItem.Text;
             Response.Write("Seleccionaste: " + selectedText);
         }
+
     }
 }

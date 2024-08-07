@@ -51,6 +51,11 @@ namespace PROYECTO_UX.Views.Registros.RegistroCalificaciones
                             break;
                         case "V":
                             this.lbltitulo.Text = "Consulta de Calificacion";
+                            txtCurso.Enabled = false;
+                            ddlEstudiantes.Enabled = false;
+                            txtParcial1.Enabled = false;
+                            txtParcial2.Enabled = false;
+                            txtExamen.Enabled = false;
                             break;
                         case "A":
                             this.lbltitulo.Text = "Modificar Estudiante";
@@ -59,6 +64,11 @@ namespace PROYECTO_UX.Views.Registros.RegistroCalificaciones
                         case "E":
                             this.lbltitulo.Text = "Eliminar Estudiante";
                             this.btnEliminar.Visible = true;
+                            txtCurso.Enabled = false;
+                            ddlEstudiantes.Enabled = false;
+                            txtParcial1.Enabled = false;
+                            txtParcial2.Enabled = false;
+                            txtExamen.Enabled = false;
                             break;
                     }
                 }

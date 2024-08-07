@@ -41,6 +41,13 @@ namespace PROYECTO_UX.Views.Registros.RegistroEstudiante
                         case "V":
                             this.lbltitulo.Text = "Consulta de Estudiante";
                             LlenarDropDownList();
+                            tbCedula.Enabled = false;
+                            tbApellidos.Enabled = false;
+                            tbNombres.Enabled = false;
+                            tbdateNacimiento.Enabled = false;
+                            tbTelefono.Enabled = false;
+                            ddlGratuidad.Enabled = false;
+                            ddlCursos.Enabled = false;
                             break;
                         case "A":
                             this.lbltitulo.Text = "Modificar Estudiante";
@@ -51,6 +58,13 @@ namespace PROYECTO_UX.Views.Registros.RegistroEstudiante
                             this.lbltitulo.Text = "Eliminar Estudiante";
                             this.btnEliminar.Visible = true;
                             LlenarDropDownList();
+                            tbCedula.Enabled = false;
+                            tbApellidos.Enabled = false;
+                            tbNombres.Enabled = false;
+                            tbdateNacimiento.Enabled = false;
+                            tbTelefono.Enabled = false;
+                            ddlGratuidad.Enabled = false;
+                            ddlCursos.Enabled = false;
                             break;
                     }
                 }

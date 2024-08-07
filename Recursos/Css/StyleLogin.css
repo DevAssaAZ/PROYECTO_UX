@@ -101,12 +101,12 @@ section {
 
 .login {
     position: relative;
-    padding: 40px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     border: 0.05 solid #000814;
     border-radius: 20px;
-    width: 500px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -130,14 +130,14 @@ section {
         .login .input-box input {
             position: relative;
             width: 100%;
-            padding: 15px 20px;
+            padding: 15px 18px;
             outline: none;
             font-size: 1.15em;
             color: #000814;
             border-radius: 5px;
             background-color: #fff;
             border: none;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .login .input-box ::placeholder {
@@ -154,10 +154,12 @@ section {
             font-weight: bold;
             font-size: 1.25em;
             transition: 0.4s;
+            cursor: pointer; /* Cambia el cursor a una mano */
         }
 
             .login .input-box #btn:hover {
                 background: #001129;
+                cursor: crosshair; /* Cambia el cursor a una cruz cuando pasas el mouse */
             }
 
 .input-box input:focus {
@@ -187,7 +189,7 @@ section {
         }
 
 .input-box {
-    margin-bottom: 10px; /* Añadir margen inferior para separación */
+    margin-bottom: 5px; /* Añadir margen inferior para separación */
 }
 
 .show-password {

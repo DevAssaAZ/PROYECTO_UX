@@ -73,6 +73,7 @@
     <Content Include="Recursos\Imagenes\Iconos\icons-facebook.png" />
     <Content Include="Recursos\Imagenes\Iconos\icons-instagram.png" />
     <Content Include="Recursos\Imagenes\ImgLogin\FondoLogin.jpeg" />
+    <Content Include="Script\jquery-3.6.0.min.js" />
     <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login\Login.aspx" />
     <Content Include="Views\Registros\RegistroCalificaciones\Calificaciones.aspx" />

@@ -12,6 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Login</title>
+    <style>
+        .custom-cursor {
+            cursor: pointer; /* Cambia el cursor a una mano */
+        }
+        
+    </style>
 </head>
 <body>
     <form runat="server">
@@ -24,16 +30,16 @@
                         <h2>Cursos De Ingles UG</h2>
                         <h2>Login</h2>
                         <div class="input-box">
-                            <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario" CssClass="form-control" />
+                            <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario" CssClass="form-control" required="true"/>
                         </div>
                         <div class="input-box">
-                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Contraseña" CssClass="form-control" />
+                            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Contraseña" CssClass="form-control" required="true"/>
                         </div>
                         <div class="show-password">
                             <asp:CheckBox ID="chkMostrarPassword" runat="server" Text="Mostrar contraseña" />
                         </div>
                         <div class="input-box">
-                            <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar Sesión" CssClass="btn btn-primary" OnClick="btnIniciarSesion_Click" />
+                            <asp:Button ID="btnIniciarSesion" runat="server" Text="Iniciar Sesión" CssClass="btn btn-primary custom-cursor" OnClick="btnIniciarSesion_Click" />
                         </div>
                         <div class="grupo">
                             <a href="#">Olvidaste tu contraseña?</a>

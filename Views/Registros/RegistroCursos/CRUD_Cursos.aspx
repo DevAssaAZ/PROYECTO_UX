@@ -6,19 +6,33 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
     <!-- Aquí no es necesario agregar referencias a Bootstrap, ya que están en la página maestra -->
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <br />
     <br />
     <br />
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <asp:Label runat="server" CssClass="h2 text-center" ID="lbltitulo"></asp:Label>
-        </div>
-    </div>
+
     <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
-        <div>
+        <div class="form-container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <asp:Label runat="server" CssClass="h2 text-center" ID="lbltitulo"></asp:Label>
+                </div>
+            </div>
+            <br />
+            <br />
             <div class="mb-3">
                 <label class="form-label">Nombre Del Curso</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbNombreCurso"></asp:TextBox>
@@ -37,8 +51,8 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Nivel</label>
-                <asp:DropDownList ID="ddlNivel" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlNivel_SelectedIndexChanged">
-                    <asp:ListItem Text="Selecciona el nivel" Value="" />
+                <asp:DropDownList ID="ddlNivel" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlNivel_SelectedIndexChanged">
+                    <asp:ListItem Text="SELECCIONAR" Value="" />
                     <asp:ListItem Text="1" Value="1" />
                     <asp:ListItem Text="2" Value="2" />
                     <asp:ListItem Text="3" Value="3" />
@@ -47,8 +61,8 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Estado</label>
-                <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
-                    <asp:ListItem Text="Selecciona el estado" Value="" />
+                <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
+                    <asp:ListItem Text="SELECCIONAR" Value="" />
                     <asp:ListItem Text="Activo" Value="Activo" />
                     <asp:ListItem Text="Cerrado" Value="Cerrado" />
                     <asp:ListItem Text="Suspendido" Value="Suspendido" />

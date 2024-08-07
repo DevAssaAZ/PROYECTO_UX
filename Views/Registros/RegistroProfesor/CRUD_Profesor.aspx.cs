@@ -46,6 +46,12 @@ namespace PROYECTO_UX.Views.Registros.RegistroProfesor
                         case "V":
                             this.lbltituloProfesor.Text = "Consulta de Profesor";
                             LlenarDropDownList();
+                            tbCedula.Enabled = false;
+                            tbapellidos.Enabled = false;
+                            tbnombres.Enabled = false;
+                            tbprofesion.Enabled = false;
+                            ddlEstadoProfesor.Enabled = false;
+                            ddlCursos.Enabled = false;
                             break;
                         case "A":
                             this.lbltituloProfesor.Text = "Modificar Profesor";
@@ -56,6 +62,12 @@ namespace PROYECTO_UX.Views.Registros.RegistroProfesor
                             this.lbltituloProfesor.Text = "Eliminar Profesor";
                             this.btnEliminar.Visible = true;
                             LlenarDropDownList();
+                            tbCedula.Enabled = false;
+                            tbapellidos.Enabled = false;
+                            tbnombres.Enabled = false;
+                            tbprofesion.Enabled = false;
+                            ddlEstadoProfesor.Enabled = false;
+                            ddlCursos.Enabled = false;
                             break;
                     }
                 }

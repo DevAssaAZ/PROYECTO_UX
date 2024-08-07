@@ -4,18 +4,32 @@
     CRUD-Profesores
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .form-container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <br />
     <br />
     <br />
-    <div class="row justify-content-center">
-        <div class="col-auto">
-            <asp:Label runat="server" CssClass="h2 text-center" ID="lbltituloProfesor"></asp:Label>
-        </div>
-    </div>
+
     <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
-        <div>
+        <div class="form-container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <asp:Label runat="server" CssClass="h2 text-center" ID="lbltituloProfesor"></asp:Label>
+                </div>
+            </div>
+            <br />
+            <br />
             <div class="mb-3">
                 <label class="form-label">Cedula</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbCedula"></asp:TextBox>
@@ -34,8 +48,8 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Estado</label>
-                <asp:DropDownList ID="ddlEstadoProfesor" runat="server" CssClass="form-control" AutoPostBack="True" OnSelectedIndexChanged="ddlEstadoProfesor_SelectedIndexChanged">
-                    <asp:ListItem Text="Selecciona el estado" Value="" />
+                <asp:DropDownList ID="ddlEstadoProfesor" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlEstadoProfesor_SelectedIndexChanged">
+                    <asp:ListItem Text="SELECCIONAR" Value="" />
                     <asp:ListItem Text="Activo" Value="Activo" />
                     <asp:ListItem Text="Suspendido" Value="Suspendido" />
                 </asp:DropDownList>

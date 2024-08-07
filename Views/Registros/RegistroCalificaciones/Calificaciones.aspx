@@ -47,6 +47,9 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <br />
+    <br />
+    <br />
     <form runat="server">
         <div class="form-container">
             <div class="row justify-content-center">
@@ -54,6 +57,8 @@
                     <asp:Label runat="server" CssClass="h2 text-center" ID="lbltitulo"></asp:Label>
                 </div>
             </div>
+            <br />
+            <br />
             <div class="form-group">
                 <label for="ddlEstudiante">Estudiante</label>
                 <asp:DropDownList ID="ddlEstudiantes" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlEstudiantes_SelectedIndexChanged" AppendDataBoundItems="true">
